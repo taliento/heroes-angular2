@@ -1,9 +1,0 @@
-<h3>Top Shows</h3>
-<div class="grid grid-pad">
-  <div *ngFor="let show of shows" [routerLink]="['/detail', show.id]" class="col-1-4">
-    <div class="module show">
-      <h4>{{show.name}}</h4>
-    </div>
-  </div>
-</div>
-<show-search></show-search>

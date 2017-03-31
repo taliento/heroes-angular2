@@ -6,20 +6,20 @@ import { HttpModule }    from '@angular/http';
 import { AppComponent }  from './app.component';
 
 //custom modules
-import { ShowDetailComponent } from './show-detail.component';
-import { ShowsComponent } from './shows.component';
-import { DashboardComponent } from './dashboard.component';
-import { ShowSearchComponent } from './show-search.component';
+import { ShowDetailComponent } from './shows/show/show-detail.component';
+import { ShowsComponent } from './shows/shows.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ShowSearchComponent } from './shows/show-search.component';
 
 //services
-import { ShowService } from './show.service';
+import { ShowService } from './shows/shared/show.service';
 
 //routing
 import { AppRoutingModule } from './app-routing.module';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService }  from './test/in-memory-data.service';
 
 @NgModule({
   imports:      [
