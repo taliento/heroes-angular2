@@ -1,0 +1,14 @@
+<h2>My Heroes</h2>
+<ul class="shows">
+  <li *ngFor="let show of shows"
+    [class.selected]="show === selectedShow"
+    (click)="onSelect(show)">
+    <span class="badge">{{show.id}}</span> {{show.name}}
+  </li>
+</ul>
+<div *ngIf="selectedShow">
+  <h2>
+    {{selectedShow.name | uppercase}} is my show
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
