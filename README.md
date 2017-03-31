@@ -1,1 +1,1 @@
-# heroes-angular2
+# shows-angular2
