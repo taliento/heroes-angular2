@@ -1,0 +1,22 @@
+<h2>My Shows</h2>
+<div>
+  <label>Show name:</label> <input #showName />
+  <button (click)="add(showName.value); showName.value=''">
+    Add
+  </button>
+</div>
+
+<ul class="shows">
+  <li *ngFor="let show of shows"
+    [class.selected]="show === selectedShow"
+    (click)="onSelect(show)">
+    <span class="badge">{{show.id}}</span> {{show.name}}
+    <button class="delete" (click)="delete(show); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedShow">
+  <h2>
+    {{selectedShow.name | uppercase}} is my show
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
